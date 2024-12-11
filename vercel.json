@@ -1,0 +1,9 @@
+{
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/cors-test.html"
+      }
+    ],
+    "alias": "cors-test.vercel.app"
+  }
