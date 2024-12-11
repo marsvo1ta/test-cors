@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Test</title>
+</head>
+<body>
+    <button onclick="testCors()">Test CORS</button>
+    <script>
+        function testCors() {
+            fetch("https://npg-ddc-backend-stag.c1.npshopping.com/v2.0/search/cargo?country-code=ua&keyword=4202229090&locale=uk&size=100", {
+                method: "GET",
+                headers: {
+                    
+                    
+                    "Authorization": "Basic c21sX2FkbWluOjRoN1RTKHZfSjdyJg=="
+                }
+            })
+            .then(response => response.json())
+            .then(data => console.log("Success:", data))
+            .catch(error => console.error("CORS Error:", error));
+        }
+    </script>
+</body>
+</html>
